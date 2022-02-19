@@ -3,7 +3,7 @@
 ##########################################################################
 ## VARIABLES
 #
-ORG 	    = https://github.com/OpenLists
+ORG 	    = https://github.com/openlists
 SITE        = openlists.github.io
 OUTPUTS     = outputs
 
@@ -21,8 +21,9 @@ prepare:
 
 clear:
 
-	rm -rf $(OUTPUTS)/
-	mkdir $(OUTPUTS)
+	@rm -rf $(OUTPUTS)/
+	@mkdir $(OUTPUTS)
+	@echo 'Cleared outputs folder'
 
 
 ##########################################################################
