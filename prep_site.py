@@ -28,6 +28,13 @@ ADD_LINES = [
     '\n'
 ]
 
+DROP_LINES = [
+    '## List of OpenLists',
+    'The collection of OpenLists includes',
+    '- [',
+    'permalink'
+]
+
 # Define output folder
 FOLDER = Path('outputs')
 
@@ -35,6 +42,13 @@ FOLDER = Path('outputs')
 ###################################################################################################
 
 def main():
+
+    # Process index file
+    os.system(CLONE_COMMAND.format('Overview'))
+    copyfile(Path('Overview') / 'README.md', FOLDER / 'index.md')
+    update_file(FOLDER / 'index.md', ADD_LINES, 'OpenLists')
+    drop_lines(FOLDER / 'index.md', DROP_LINES)
+    os.system(RM_COMMAND.format('Overview'))
 
     for label, repo in REPOS.items():
 
@@ -54,6 +68,7 @@ def main():
 
 
 def update_file(filename, add_lines, label):
+    """Helper function to update file contents."""
 
     add_lines = deepcopy(add_lines)
 
@@ -73,6 +88,26 @@ def update_file(filename, add_lines, label):
 
     with open(filename, 'w') as file:
         file.writelines(contents)
+
+def drop_lines(filename, lines_to_drop):
+    """Helper function to drop lines from files."""
+
+    with open(filename, 'r') as file:
+        contents = file.readlines()
+
+    output = []
+    for line in contents:
+
+        dropped = False
+        for drop in lines_to_drop:
+            if drop in line:
+                dropped = True
+                break
+        if not dropped:
+            output.append(line)
+
+    with open(filename, 'w') as file:
+        file.writelines(output)
 
 
 if __name__ == "__main__":
