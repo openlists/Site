@@ -6,7 +6,6 @@
 ORG 	    = https://github.com/OpenLists
 SITE        = openlists.github.io
 OUTPUTS     = outputs
-DOCS        = docs
 
 
 ##########################################################################
@@ -35,7 +34,7 @@ deploy:
 	git clone --depth 1 $(ORG)/$(SITE)
 
 	# Copy in the website files & processed pages
-	cp $(DOCS)/* $(SITE)/
+	cp _config.yml $(SITE)/
 	cp $(OUTPUTS)/* $(SITE)/
 
 	# Push the update from the host repository

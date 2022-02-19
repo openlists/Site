@@ -17,7 +17,7 @@ To re-deploy the website, run:
 ## Details
 
 In addition to the Makefile, this repo contains:
-- `docs/`: this folder stores configs and content for the site
+- `_config.yml`: the config file for the site, which gets copied over
 - `repos.txt`: a list of the OpenLists repositories to process and add
 - `prep_site.py`: script for getting and converting website content
 
