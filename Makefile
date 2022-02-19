@@ -39,11 +39,10 @@ deploy:
 	cp $(OUTPUTS)/* $(SITE)/
 
 	# Push the update from the host repository
-	cd $(SITE)
-	git add *
-	git commit -m 'deploy site'
+	cd $(SITE) && \
+	git add * && \
+	git commit -m 'deploy site' && \
 	git push
-	cd ..
 
 	# Clear out the site repo
 	rm -rf $(SITE)
