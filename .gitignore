@@ -1,2 +1,5 @@
 # Ignore outputs file
 outputs/
+
+# Ignore cachec files
+__pycache__/*
