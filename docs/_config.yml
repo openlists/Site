@@ -1,0 +1,25 @@
+title: 'OpenLists'
+description: 'Curated lists of Open Resources.'
+
+remote_theme: hydecorp/hydejack
+#remote_theme: poole/hyde
+
+menu:
+  - title:  Data
+    url:    /data/
+  - title:  Software
+    url:    /software/
+  - title:  Spikes
+    url:    /spikes/
+  - title:  Python
+    url:    /python/
+  - title:  Git
+    url:    /git/
+  - title:  DSP
+    url:    /dsp/
+  - title:  Tasks
+    url:    /tasks/
+  - title:  Ontologies
+    url:    /ontologies/
+  - title:  Other
+    url:    /other/

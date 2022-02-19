@@ -1,0 +1,9 @@
+Python,PythonResources
+Git,GitResources
+DSP,DSPResources
+Data,ElectrophysiologyData
+Software,ElectrophysiologySoftware
+Spikes,SpikeResources
+Tasks,BehavioralTaskSoftware
+Ontologies,NeuroOntologies
+Other,OtherLists
