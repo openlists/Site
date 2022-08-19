@@ -1,6 +1,6 @@
 Python,PythonResources
 Git,GitResources
-Math,MathStatsResources
+Math&Stats,MathStatsResources
 DSP,DSPResources
 Data,ElectrophysiologyData
 Software,ElectrophysiologySoftware

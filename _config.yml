@@ -20,8 +20,8 @@ menu:
     url:    /python/
   - title:  Git
     url:    /git/
-  - title:  Math
-    url:    /math/
+  - title:  Math&Stats
+    url:    /math&stats/
   - title:  DSP
     url:    /dsp/
   - title:  Tasks
