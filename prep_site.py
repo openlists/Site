@@ -42,6 +42,11 @@ FOLDER = Path('outputs')
 ###################################################################################################
 
 def main():
+    """Main function to manage site creation."""
+
+    # Check for and create (if missing) outputs folder
+    if not os.path.exists(FOLDER):
+        os.mkdir(FOLDER)
 
     # Process index file
     os.system(CLONE_COMMAND.format('Overview'))
@@ -68,7 +73,17 @@ def main():
 
 
 def update_file(filename, add_lines, label):
-    """Helper function to update file contents."""
+    """Helper function to update file contents.
+
+    Parameters
+    ----------
+    filename : str or Path
+        Name of the file to load and update.
+    add_lines : list of str
+        Lines to add to the file.
+    label : str
+        Label to add into the header information.
+    """
 
     add_lines = deepcopy(add_lines)
 
@@ -89,8 +104,17 @@ def update_file(filename, add_lines, label):
     with open(filename, 'w') as file:
         file.writelines(contents)
 
+
 def drop_lines(filename, lines_to_drop):
-    """Helper function to drop lines from files."""
+    """Helper function to drop lines from files.
+
+    Parameters
+    ----------
+    filename : str or Path
+        Name of the file to load and update.
+    lines_to_drop : list of str
+        Lines to drop from the file.
+    """
 
     with open(filename, 'r') as file:
         contents = file.readlines()
