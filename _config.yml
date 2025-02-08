@@ -7,7 +7,6 @@ remote_theme: hydecorp/hydejack
 author:
   social:
     github: OpenLists
-    twitter: TomDonoghue
 
 menu:
   - title:  Data
