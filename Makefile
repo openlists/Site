@@ -19,7 +19,7 @@ prepare:
 ##########################################################################
 ## CLEAN UPS
 
-clear:
+clean:
 
 	@rm -rf $(OUTPUTS)/
 	@mkdir $(OUTPUTS)
